@@ -16,6 +16,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <ctype.h>
 
 #include <Common/UefiBaseTypes.h>
 #include <Common/PiFirmwareFile.h>
@@ -1062,7 +1063,7 @@ GetAlignmentFromFile(char *InFile, UINT32 *Alignment)
   PeFileBuffer = (UINT8 *) malloc (PeFileSize);
   if (PeFileBuffer == NULL) {
     fclose (InFileHandle);
-    Error(NULL, 0, 4001, "Resource", "memory cannot be allocated  of %s", InFileHandle);
+    Error(NULL, 0, 4001, "Resource", "memory cannot be allocated for %s", InFile);
     return EFI_OUT_OF_RESOURCES;
   }
   fread (PeFileBuffer, sizeof (UINT8), PeFileSize, InFileHandle);
