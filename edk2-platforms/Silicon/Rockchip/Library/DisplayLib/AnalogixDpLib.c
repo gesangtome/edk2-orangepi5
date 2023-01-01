@@ -864,7 +864,7 @@ AnalogixDpConfigVideo(
   AnalogixDpEnableVideoMute(0);
   AnalogixDpEnableVideoMaster(Dp,0);
   AnalogixDpStartVideo(Dp);
-  INTN TimeoutLoop, DoneCount= 0; 
+  INTN TimeoutLoop = 0, DoneCount = 0; 
   for (;;) {
 	  TimeoutLoop++;
 	  if (AnalogixDpIsVideoStreamOn(Dp) == 0) { 
