@@ -13,3 +13,15 @@ echo "Build idblock Image ..."
     -n rk3588 -T rksd \
     -d rkbin/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin:rkbin/rk3588_spl_v1.11.bin \
     idblock.bin
+
+echo "Build Rockchip Fit Image ..."
+# FV Image
+install Build/RK3588/DEBUG_GCC5/FV/BL33_AP_UEFI.Fv BL33_AP_UEFI.Fv
+
+# FDT
+install rkbin/UEFI.dtb UEFI.dtb
+
+cat rkbin/UEFI.its | sed "s#@DEVICE@#UEFI#g" > UEFI.its
+
+./rkbin/tools/x86_64/mkimage \
+    -f UEFI.its -p 0x1000 -E RK3588_EFI.img
