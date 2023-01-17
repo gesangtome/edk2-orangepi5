@@ -6,6 +6,9 @@ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-platforms:$WORKSPACE/edk2-n
 export GCC5_AARCH64_PREFIX=aarch64-none-linux-gnu-
 
 . edk2/edksetup.sh
+
+make -C edk2/BaseTools
+
 build -a AARCH64 -t GCC5 -p Platform/Rockchip/RK3588/RK3588.dsc -D ROCKCHIP_PCIE30 -D ROCKCHIP_VOPEN -D ROCKCHIP_ACPIEN
 
 echo "Build idblock Image ..."
