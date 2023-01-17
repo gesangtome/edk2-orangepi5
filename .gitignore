@@ -3,3 +3,5 @@ BL33_AP_UEFI.Fv
 UEFI.dtb
 UEFI.its
 RK3588_EFI.img
+RK3588_NOR_FLASH.img
+nvdata.img

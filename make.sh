@@ -25,3 +25,14 @@ cat rkbin/UEFI.its | sed "s#@DEVICE@#UEFI#g" > UEFI.its
 
 ./rkbin/tools/x86_64/mkimage \
     -f UEFI.its -p 0x1000 -E RK3588_EFI.img
+
+echo "Build SPI Image ..."
+install Build/RK3588/DEBUG_GCC5/FV/NOR_FLASH_IMAGE.fd RK3588_NOR_FLASH.img
+
+dd if=RK3588_NOR_FLASH.img of=nvdata.img bs=1K skip=7936
+dd if=rkbin/rk3588_spi_nor_gpt.img of=RK3588_NOR_FLASH.img
+dd if=idblock.bin of=RK3588_NOR_FLASH.img bs=1K seek=32
+dd if=idblock.bin of=RK3588_NOR_FLASH.img bs=1K seek=544
+dd if=RK3588_EFI.img of=RK3588_NOR_FLASH.img bs=1K seek=1024
+dd if=nvdata.img of=RK3588_NOR_FLASH.img bs=1K seek=7936
+echo "Target: RK3588_NOR_FLASH.img"
