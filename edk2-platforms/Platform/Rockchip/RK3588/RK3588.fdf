@@ -141,7 +141,7 @@ READ_LOCK_STATUS   = TRUE
   #
   # GPIO
   #
-  INF Platform/Rockchip/RK3588/RK3588GpioDxe/RK3588GpioDxe.inf
+  INF Platform/Rockchip/RK3588/Drivers/RK3588GpioDxe/RK3588GpioDxe.inf
   #INF ArmPlatformPkg/Drivers/PL061GpioDxe/PL061GpioDxe.inf
 
   #
@@ -162,15 +162,15 @@ READ_LOCK_STATUS   = TRUE
 !ifdef $(ROCKCHIP_VOPEN)
   INF Silicon/Rockchip/Drivers/Vop2Dxe/Vop2Dxe.inf
   INF Silicon/Rockchip/Drivers/LcdGraphicsOutputDxe/LcdGraphicsOutputDxe.inf
-  INF Platform/Rockchip/RK3588/LogoDxe/LogoDxe.inf
-  INF Platform/Rockchip/RK3588/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
+  INF Platform/Rockchip/RK3588/Drivers/LogoDxe/LogoDxe.inf
+  INF Platform/Rockchip/RK3588/Drivers/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
 !endif
-  INF Platform/Rockchip/RK3588/RK3588Dxe/RK3588Dxe.inf
+  INF Platform/Rockchip/RK3588/Drivers/RK3588Dxe/RK3588Dxe.inf
 
   #
   # SMBIOS Support
   #
-  INF Platform/Rockchip/RK3588/PlatformSmbiosDxe/PlatformSmbiosDxe.inf
+  INF Platform/Rockchip/RK3588/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe.inf
   INF MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
 
   #

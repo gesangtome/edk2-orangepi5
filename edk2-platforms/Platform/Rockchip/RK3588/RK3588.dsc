@@ -358,8 +358,8 @@
   Silicon/Rockchip/Drivers/Vop2Dxe/Vop2Dxe.inf
   Silicon/Rockchip/Drivers/LcdGraphicsOutputDxe/LcdGraphicsOutputDxe.inf
 
-  Platform/Rockchip/RK3588/LogoDxe/LogoDxe.inf
-  Platform/Rockchip/RK3588/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
+  Platform/Rockchip/RK3588/Drivers/LogoDxe/LogoDxe.inf
+  Platform/Rockchip/RK3588/Drivers/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf
 
   #
   # ACPI Support
@@ -377,7 +377,7 @@
   #
   # GPIO
   #
-  Platform/Rockchip/RK3588/RK3588GpioDxe/RK3588GpioDxe.inf
+  Platform/Rockchip/RK3588/Drivers/RK3588GpioDxe/RK3588GpioDxe.inf
   #ArmPlatformPkg/Drivers/PL061GpioDxe/PL061GpioDxe.inf
 
   #
@@ -386,7 +386,7 @@
   EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
 
   # Platform drivers
-  Platform/Rockchip/RK3588/RK3588Dxe/RK3588Dxe.inf
+  Platform/Rockchip/RK3588/Drivers/RK3588Dxe/RK3588Dxe.inf
 
   # I2C drivers
   Silicon/Rockchip/Drivers/I2c/I2cDxe/I2cDxe.inf
@@ -425,7 +425,7 @@
   #
   # SMBIOS Support
   #
-  Platform/Rockchip/RK3588/PlatformSmbiosDxe/PlatformSmbiosDxe.inf
+  Platform/Rockchip/RK3588/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe.inf
   MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   #
   # USB Ohci Controller
