@@ -53,12 +53,16 @@
   LpcLib|Include/Library/LpcLib.h
 
 [PcdsFixedAtBuild]
+  # PCD defines for Serial Port and UART
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSerialRegisterBase|0xFEB50000|UINT64|0x00000360
+  gEfiMdePkgTokenSpaceGuid.PcdUartDefaultBaudRate|1500000|UINT64|0x00000361
+  gEfiMdePkgTokenSpaceGuid.PcdUartDefaultParity|0|UINT8|0x00000362
+  gEfiMdePkgTokenSpaceGuid.PcdUartDefaultDataBits|8|UINT8|0x00000363
+  gEfiMdePkgTokenSpaceGuid.PcdUartDefaultStopBits|1|UINT8|0x00000364
+  gRockchipTokenSpaceGuid.UartClkInHz|24000000|UINT32|0x00000365
+
   gRockchipTokenSpaceGuid.PcdNORFlashBase|0x00000000|UINT64|0x01000008
   gRockchipTokenSpaceGuid.PcdNORFlashCachableSize|0x1000000|UINT32|0x0100000c
-
-  gRockchipTokenSpaceGuid.PcdSerialPortSendDelay|500000|UINT32|0x01000010
-  gRockchipTokenSpaceGuid.UartClkInHz|24000000|UINT32|0x0100001F
-  #gRockchipTokenSpaceGuid.PcdSerialRegisterSpaceSize|0x10000|UINT64|0x01000019
 
   gRockchipTokenSpaceGuid.PcdDsaSmmuBaseAddress|0|UINT64|0x00000047
   gRockchipTokenSpaceGuid.PcdPcieSmmuBaseAddress|0|UINT64|0x00000046
